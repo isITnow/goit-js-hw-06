@@ -3,8 +3,8 @@ const input = document.querySelector('#name-input');
 
 input.addEventListener('input', onInputChange);
 
-function onInputChange(event) {
-    event.currentTarget.value
-        ? (userName.textContent = event.currentTarget.value)
+function onInputChange() {
+    input.value
+        ? (userName.textContent = input.value)
         : (userName.textContent = 'Anonymous');
 }
