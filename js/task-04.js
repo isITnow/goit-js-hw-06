@@ -6,14 +6,13 @@ const btnIncrement = document.querySelector('[data-action="increment"]');
 
 let number = document.querySelector('#value');
 
-const onIncrementClick = () => {
-    counterValue += 1;
-    return (number.textContent = counterValue);
-};
 btnIncrement.addEventListener('click', onIncrementClick);
-
-const onDecrementClick = () => {
-    counterValue -= 1;
-    return (number.textContent = counterValue);
-};
 btnDecrement.addEventListener('click', onDecrementClick);
+
+function onIncrementClick() {
+    return (number.textContent = counterValue += 1);
+}
+
+function onDecrementClick() {
+    return (number.textContent = counterValue -= 1);
+}
