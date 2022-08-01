@@ -1,10 +1,10 @@
 const userName = document.querySelector('#name-output');
-const input = document.querySelector('#name-input');
+const inputEl = document.querySelector('#name-input');
 
-input.addEventListener('input', onInputChange);
+inputEl.addEventListener('input', onInputChange);
 
 function onInputChange() {
-    input.value
-        ? (userName.textContent = input.value)
+    inputEl.value
+        ? (userName.textContent = inputEl.value)
         : (userName.textContent = 'Anonymous');
 }
